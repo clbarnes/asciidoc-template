@@ -1,0 +1,18 @@
+= The chapter of beginnings
+
+It's a chapter!
+
+== It has subsections!
+
+They have code in them!
+
+.show me the code
+[source,python]
+----
+import random  # <1>
+rand = random.Random()  # <2>
+rand.random()  # <3>
+----
+<1> Give me random
+<2> Make it more random
+<3> Random overload!

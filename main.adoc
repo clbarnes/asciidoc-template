@@ -1,0 +1,107 @@
+= My title: A subtitle
+:author: Christopher L. Barnes
+:email: cb619@cam.ac.uk
+:revdate: 2019-04-08
+:source-highlighter: coderay
+:toc: preamble
+:doctype: book
+:stem: latexmath
+:mathematical-format: svg
+ifdef::backend-html5[]
+:mathematical-inline: true
+endif::[]
+//:bibtex-file: bibliography.bib
+
+<<<
+
+[abstract]
+.Abstract
+--
+
+Heeeere gooooes my abstraaaact.
+
+It has many a paragraph.
+
+--
+
+include::chapters/chap1/main.adoc[leveloffset=+1]
+
+<<<
+
+== More chapters
+
+Has images!
+
+image::img/modules.svg[align=center]
+.things
+
+And *bold text*.
+And _italics_.
+Even `monospaced!`
+
+<<<
+
+== Another chapter
+
+.Block title things
+====
+Yep, that's right, it's a block title.
+====
+
+.Sidebar things
+****
+And a sidebar too!
+****
+
+|===
+| column a | column b | column c
+
+| whatever | whatever | whatever
+| and so +
+with line breaks
+| on
+| and so
+| and it goes on
+| and on
+| and on
+|===
+.and here
+
+[quote, mr magoo, things]
+____
+here is some text from a thing
+
+and some linebreaks too
+____
+
+[verse, mr magoo, other things]
+____
+helloo
+   this also has linebreaks
+and
+stuff
+____
+
+
+=== Whatever
+
+As earlier described cite:[small] by citenp:[big]
+
+=== Time to get weird
+
+Can I do ^superscripts^?
+
+Here we have some maths stem:[\sqrt{4} = 2] in the middle of a line.
+And here, some more
+
+[stem]
+++++
+\frac{1}{2}
+++++
+
+Here -> are => some -> arrows (TM)
+
+[bibliography]
+== References
+
+bibliography::[]
