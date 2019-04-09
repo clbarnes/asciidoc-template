@@ -9,3 +9,4 @@
 -a pdf-fontsdir=./fonts@
 -a pdf-style=theme.yml
 -a notitle@
+-a data-uri@

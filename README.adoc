@@ -38,6 +38,3 @@ Output files are put into the link:out[`out/`] directory, in subdirectories base
 == Notes
 
 * asciimath is not compatible with asciidoctor-mathematical, and maths in PDF is not possible without asciidoctor-mathematical
-* mathematical-inline option does not render correctly in HTML and doesn't do anything in PDF
-* HTML uses relative links for images and therefore must stay in the top level directory
-* SVG files are produced for maths, but are not required after the PDF has been generated

@@ -1,0 +1,9 @@
+[abstract]
+.Abstract
+--
+
+This is an abstract; its header is controlled elsewhere.
+
+It does have multiple paragraphs, though!
+
+--

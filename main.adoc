@@ -1,22 +1,11 @@
 = My title: A subtitle
-//ifdef::backend-html5[]
-//:mathematical-inline: true
-//endif::[]
 :doctype: book
 :toc: preamble
 :notitle!:
 
 <<<
 
-[abstract]
-.Abstract
---
-
-Heeeere gooooes my abstraaaact.
-
-It has many a paragraph.
-
---
+include::src/abstract_text.adoc[]
 
 include::src/chap1/main.adoc[leveloffset=+1]
 
