@@ -1,0 +1,10 @@
+-a author="Christopher L. Barnes"@
+-a email="cb619@cam.ac.uk"@
+-a revdate="$(date +%F)"@
+-a source-highlighter=coderay@
+-a toc=preamble@
+-a doctype=article@
+-a stem=latexmath@
+-a mathematical-format=svg@
+-a bibtex-file=bibliography.bib@
+-a pdf-fontsdir=./fonts
