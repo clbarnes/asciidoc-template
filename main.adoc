@@ -1,16 +1,10 @@
 = My title: A subtitle
-:author: Christopher L. Barnes
-:email: cb619@cam.ac.uk
-:revdate: 2019-04-08
-:source-highlighter: coderay
-:toc: preamble
+//ifdef::backend-html5[]
+//:mathematical-inline: true
+//endif::[]
 :doctype: book
-:stem: latexmath
-:mathematical-format: svg
-ifdef::backend-html5[]
-:mathematical-inline: true
-endif::[]
-//:bibtex-file: bibliography.bib
+:toc: preamble
+:notitle!:
 
 <<<
 
@@ -24,15 +18,15 @@ It has many a paragraph.
 
 --
 
-include::chapters/chap1/main.adoc[leveloffset=+1]
+include::src/chap1/main.adoc[leveloffset=+1]
 
-<<<
+include::src/chap2/lipsum.adoc[leveloffset=+1]
 
 == More chapters
 
 Has images!
 
-image::img/modules.svg[align=center]
+image::src/modules.svg[align=center]
 .things
 
 And *bold text*.

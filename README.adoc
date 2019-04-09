@@ -1,0 +1,43 @@
+= Asciidoc template
+
+== Dependencies
+
+* Ruby: as specified in the link:Gemfile[`Gemfile`]
+** link:https://github.com/asciidoctor/asciidoctor-mathematical#ubuntu[asciidoctor-mathematical] also has system dependencies
+* GNU make
+
+== Workflow
+
+The link:Makefile[`Makefile`] compiles (by default) link:main.adoc[`main.adoc`], which pulls in chapters stored in link:chapters[`chapters`].
+Every asciidoc file should be compilable on its own (although references etc. may not work).
+
+[source,bash]
+----
+# make the default target (pdf)
+make
+
+# make a PDF of the given chapter
+make FILE=chapters/chap1.adoc
+
+# get rid of compiled files
+make clean
+----
+
+Try to use relative paths for images and other resources.
+
+Try to keep link:main.adoc[`main.adoc`] as minimal as possible, to refer to other files.
+
+Because they will, by and large, share the same attributes, as many attributes as possible should be specified by the caller (not in the text).
+In the link:options[`options/`] directory, specify all the command line options you want!
+These files will be concatenated and read in by `make`.
+Paths are all relative to the project directory.
+Use a trailing `@` to allow individual files to override attributes as necessary (only when that file is the top-level source file).
+
+Output files are put into the link:out[`out/`] directory, in subdirectories based on the source file.
+
+== Notes
+
+* asciimath is not compatible with asciidoctor-mathematical, and maths in PDF is not possible without asciidoctor-mathematical
+* mathematical-inline option does not render correctly in HTML and doesn't do anything in PDF
+* HTML uses relative links for images and therefore must stay in the top level directory
+* SVG files are produced for maths, but are not required after the PDF has been generated

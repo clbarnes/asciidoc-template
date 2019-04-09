@@ -1,17 +1,28 @@
-SRC_PATH = main.adoc
+ifndef FILE
+FILE = main.adoc
+endif
+ifndef EXTRA_ARGS
+EXTRA_ARGS =
+endif
+TGT_DIR = tgt
 TGT_NAME = out
-OPTIONS = -r asciidoctor-mathematical -r asciidoctor-bibtex -n -v
+OPTIONS_DIR = options
+OPTIONS = $(shell cat $(OPTIONS_DIR)/*.txt) $(EXTRA_ARGS)
 
 default: pdf
 
 pdf:
-	asciidoctor-pdf $(OPTIONS) -o $(TGT_NAME).pdf $(SRC_PATH)
+	asciidoctor-pdf $(OPTIONS) -o $(TGT_NAME).pdf $(FILE)
 
 html:
-	asciidoctor $(OPTIONS) -b html -o $(TGT_NAME).html $(SRC_PATH)
+	asciidoctor $(OPTIONS) -b html -o $(TGT_NAME).html $(FILE)
 
-clean:
-	rm -f $(TGT_NAME).*
+clean-stem:
 	rm -f stem-*
+
+clean-out:
+	rm -f out.*
+
+clean: clean-stem clean-out
 
 all: clean html pdf
