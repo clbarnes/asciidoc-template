@@ -1,3 +1,4 @@
 = Abstract
+:notitle:
 
 include::src/abstract_text.adoc[]

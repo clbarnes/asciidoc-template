@@ -24,7 +24,7 @@ clean-stem:
 	rm -f stem-*
 
 clean-out:
-	rm -f out.*
+	rm -f $(TGT_DIR)/$(TGT_NAME).*
 
 clean: clean-stem clean-out
 
