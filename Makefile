@@ -17,8 +17,11 @@ pdf:
 html:
 	asciidoctor $(OPTIONS) -b html -o $(TGT_NAME).html $(FILE) && $(MAKE) to-tgt
 
+docbook:
+	asciidoctor $(OPTIONS) -b docbook -o $(TGT_NAME).dbk $(FILE) && $(MAKE) to-tgt
+
 to-tgt: clean-stem
-	for fpath in `find . -maxdepth 1 -name "*.pdf" -o -name "*.html"` ; do mv $$fpath $(TGT_DIR)/ ; done
+	for fpath in `find . -maxdepth 1 -name "*.pdf" -o -name "*.html" -o -name "*.dbk"` ; do mv $$fpath $(TGT_DIR)/ ; done
 
 clean-stem:
 	rm -f stem-*
@@ -28,4 +31,7 @@ clean-out:
 
 clean: clean-stem clean-out
 
-all: clean html pdf
+all: clean html pdf docbook
+
+count: docbook
+	echo "\n\n`docbook_status $(TGT_DIR)/$(TGT_NAME).dbk`"

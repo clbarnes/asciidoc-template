@@ -1,5 +1,4 @@
 = The chapter of beginnings
-:doctype: article
 
 It's a chapter!
 

@@ -30,6 +30,7 @@ font:
       italic: freefont-20120503/FreeMonoOblique.ttf
       bold_italic: freefont-20120503/FreeMonoBoldOlique.ttf
   fallbacks:
+    - Noto Serif
     - M+ 1p Fallback
 page:
   background_color: ffffff

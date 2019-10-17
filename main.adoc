@@ -1,9 +1,8 @@
+[#doc]
 = My title: A subtitle
-:doctype: book
+//:doctype: book
 :toc: preamble
 :notitle!:
-
-<<<
 
 include::src/abstract_text.adoc[]
 
@@ -11,20 +10,27 @@ include::src/chap1/main.adoc[leveloffset=+1]
 
 include::src/chap2/lipsum.adoc[leveloffset=+1]
 
+[#chap-more]
 == More chapters
 
 Has images!
 
-image::src/modules.svg[align=center]
+[#img-svg]
 .things
+image::src/modules.svg[SVG alt text,align=center]
 
 And *bold text*.
 And _italics_.
-Even `monospaced!`
+Even `monospaced`!
+
+And I can refer to my image (see <<img-svg>>).
 
 <<<
 
 == Another chapter
+
+It's worth noting that I can refer to <<chap-more>> here too.
+Or even the whole <<doc>>
 
 .Block title things
 ====
@@ -83,6 +89,11 @@ And here, some more
 ++++
 
 Here -> are => some -> arrows (TM)
+
+††††
+
+
+A circle has 360&#176;
 
 [bibliography]
 == References

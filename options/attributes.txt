@@ -10,3 +10,5 @@
 -a pdf-style=theme.yml
 -a data-uri@
 -a allow-uri-read@
+-a xrefstyle=short@
+-a reproducible@

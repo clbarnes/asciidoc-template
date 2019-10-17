@@ -5,7 +5,7 @@ GEM
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     afm (0.2.2)
-    asciidoctor (2.0.6)
+    asciidoctor (2.0.7)
     asciidoctor-bibtex (0.3.1)
       bibtex-ruby (~> 4)
       citeproc-ruby (~> 1)
@@ -25,7 +25,6 @@ GEM
       safe_yaml (~> 1.0.4)
       thread_safe (~> 0.3.6)
       treetop (= 1.5.3)
-    asciimath (1.0.8)
     bibtex-ruby (4.4.7)
       latex-decode (~> 0.0)
     citeproc (1.0.9)
@@ -41,13 +40,19 @@ GEM
       csl (~> 1.0)
     css_parser (1.7.0)
       addressable
+    docbook_status (1.1.0)
+      libxml-ruby (~> 2.9)
+      os (~> 1)
+      term-ansicolor (~> 1)
     hashery (2.1.2)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     latex-decode (0.3.1)
+    libxml-ruby (2.9.0)
     mathematical (1.6.12)
       ruby-enum (~> 0.4)
     namae (1.0.1)
+    os (1.0.0)
     pdf-core (0.7.0)
     pdf-reader (2.2.0)
       Ascii85 (~> 1.0.0)
@@ -74,7 +79,10 @@ GEM
       i18n
     ruby-rc4 (0.1.5)
     safe_yaml (1.0.5)
+    term-ansicolor (1.7.1)
+      tins (~> 1.0)
     thread_safe (0.3.6)
+    tins (1.20.2)
     treetop (1.5.3)
       polyglot (~> 0.3)
     ttfunk (1.5.1)
@@ -87,8 +95,8 @@ DEPENDENCIES
   asciidoctor-bibtex
   asciidoctor-mathematical
   asciidoctor-pdf
-  asciimath
   coderay
+  docbook_status
   mathematical
 
 BUNDLED WITH
